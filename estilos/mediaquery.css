@@ -15,13 +15,13 @@
 
   section#login > div#imagem {
     float: left; /* Joga a div para o lado esquerdo */
-    width: 30%;
+    width: 50%;
     height: 100%;
   }
 
   section#login > div#formulario {
     float: right; /* Joga a div para o lado direito */
-    width: 70%;
+    width: 50%;
   }
 
 }
