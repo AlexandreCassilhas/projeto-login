@@ -27,19 +27,19 @@ main {
 }
 
 section#login {
-  /* Centralizando a Div "section" no meio da tela */
+  background-color: white;
+  width: 300px;
+  height: 570px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.596);
+  overflow: hidden; /* Tudo o que estiver fora da borda ficará escondido */
+
+   /* Centralizando a Div "section" no meio da tela */
   /* (Lembrando que a position do "main" precisa estar como "relative") */
   position:absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow: hidden; /* Tudo o que estiver fora da borda ficará escondido */
-
-  background-color: white;
-  width: 300px;
-  height: 580px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.596);
 }
 
 section#login > div#imagem {
@@ -61,14 +61,16 @@ div#formulario > h2 {
 
 div#formulario > p {
   font-size: 0.8em;
+  margin: 15px 10px;
 }
 
 .campo {
   background-color: #5f2c82;
+  border: 2px solid #5f2c82;
   display: block;
   width: 100%;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 8px;
   margin: 5px 0px;
 }
 
@@ -76,19 +78,31 @@ div#formulario > p {
   display: none;
 }
 
-input#iemail {
-  margin-top: 7px;
-  height: 25px;
-  width: 230px;
-  border-radius: 5px;
+.campo > span {
+  color: white;
+  font-size: 2em;
+  width: 40px;
+  padding: 5px;
 }
 
-input#isenha {
-  margin-top: 7px;
-  height: 25px;
-  width: 230px;
-  border-radius: 5px;
+.campo > input {
+  background-color: #94cfcd;
+  font-size: 1em;
+  /* largura 100% da div "campo" menos 44px*/
+  width: calc(100% - 44px); 
+  height: 100%;
+  border: 0px;
+  border-radius: 8px;
+  padding: 4px 0px;
+  /* sobe o campo input em 12px no eixo "Y" */
+  transform: translateY(-12px);
 }
+
+/* Ao clicar no campo e digitar, altera o backgroud para white. Propriedade "focus-whithin" */
+.campo > input:focus-within {
+  background-color: white;
+}
+
 
 /* Forma de se referenciar a um botão tipo "Submit" nas CSS */
 .submit-button {
